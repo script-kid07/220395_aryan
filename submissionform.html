@@ -1,16 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Submission Form</title>
+  <style>
+    /* Form container */
+    .form-container {
+      max-width: 350px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 5px;
+    }
+
+    /* Form labels */
+    label {
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    /* Form inputs */
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    /* Form radio buttons */
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    /* Form submit button */
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    /* Background image */
+    body {
+      background-image: url('Aryan.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
 </head>
+<h1><center>HERE WE GO! ARYAN GROUP OF INDUSTRY</center></h1>
 <body>
-    <form>
-        <label for="fname">FIRST NAME</label><br/>
-        <input type="text"
-    </form>   
-    
+  <div class="form-container">
+    <form action="submit.php" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="roll">Roll</label>
+      <input type="text" id="roll" name="roll" required>
+
+      <label for="phone">Phone</label>
+      <input type="text" id="phone" name="phone" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="gender">Gender</label>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Female</label>
+
+      <label for="subjects">Subjects</label>
+      <select id="subjects" name="subjects[]" multiple required>
+        <option value="mathS">Math</option>
+        <option value="science">Science</option>
+      </select>
+
+      <label for="marks">Marks</label>
+      <input type="number" id="marks" name="marks" min="0" max="100" required>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
 </body>
 </html>
