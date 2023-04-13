@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+    <script>
+        function submitForm() {
+            // Get form data
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var address = document.getElementById("address").value;
+
+            // Create an object to store form data
+            var formData = {
+                name: name,
+                email: email,
+                phone: phone,
+                address: address
+            };
+
+            // Display form data on the web page
+            var output = "Name: " + formData.name + "<br>";
+            output += "Email: " + formData.email + "<br>";
+            output += "Phone: " + formData.phone + "<br>";
+            output += "Address: " + formData.address + "<br>";
+
+            document.getElementById("output").innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    <h1>Contact Information</h1>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <br>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" cols="30" required></textarea>
+        <br>
+        <input type="button" value="Submit" onclick="submitForm()">
+    </form>
+    <div id="output"></div>
+</body>
+</html>
