@@ -1,0 +1,33 @@
+h1 {
+    color: aqua;
+}
+#first-heading{
+    text-align: center;
+    margin-top: auto;
+    font-size: px
+ }
+ tr:hover {
+    color: red;
+}
+td:hover {
+    color: yellowgreen;
+}
+input[type="text"]{
+    text-align: center;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid green;
+    font-size:20px;
+}
+input[type="text"]{
+    text-align: center;
+    background-color: purple;
+    color: white;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px solid green;
+    font-size:20px;
+}
+
